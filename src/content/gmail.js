@@ -3,6 +3,10 @@ console.log("Gmail LinkedIn Connector: Content script loaded.");
 
 // Function to extract all unique participants from the thread
 function getThreadParticipants() {
+    // Try to clean up current user email from title "Inbox - user@gmail.com - Gmail"
+    const titleMatch = document.title.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/);
+    const myEmail = titleMatch ? titleMatch[1].toLowerCase() : null;
+
     // We use the existing .gD class which Gmail uses for people/contacts.
     // This will pick up Senders, and often people in the "to" field if expanded.
     const elements = document.querySelectorAll('.gD');
@@ -11,6 +15,10 @@ function getThreadParticipants() {
     elements.forEach(el => {
         const email = el.getAttribute('email');
         let name = el.textContent || el.getAttribute('name');
+
+        // Skip myself
+        if (email && myEmail && email.toLowerCase() === myEmail) return;
+        if (name && name.toLowerCase() === 'me') return;
 
         // Clean name: Remove quotes, extra spaces
         if (name) {
