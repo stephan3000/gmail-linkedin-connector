@@ -4,8 +4,6 @@ A Chrome Extension that helps you quickly find LinkedIn profiles for people in y
 
 **Safe, Private, and Open Source.**
 
-![Extension Screenshot](https://raw.githubusercontent.com/placeholder-image.png)
-
 ## Why use this?
 Recruiters, Salespeople, and Networkers often need to verify the LinkedIn profiles of people emailing them. 
 This extension adds a **Side Panel** to Gmail that:
