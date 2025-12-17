@@ -1,0 +1,110 @@
+body {
+    width: 320px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 15px;
+    color: #333;
+    overflow-y: auto;
+    max-height: 600px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Individual Cards */
+.profile-wrapper {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 1em;
+    margin: 0;
+}
+
+.sub {
+    color: #666;
+    font-size: 0.85em;
+    margin: 2px 0 0 0;
+}
+
+.error {
+    color: #d93025;
+}
+
+.actions {
+    display: flex;
+    gap: 5px;
+}
+
+button {
+    flex: 1;
+    padding: 6px 10px;
+    border-radius: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9em;
+    transition: background 0.2s;
+    border: 1px solid transparent;
+}
+
+.primary {
+    background-color: #0a66c2;
+    color: white;
+}
+
+.primary:hover {
+    background-color: #004182;
+}
+
+.primary:disabled {
+    background-color: #cccccc;
+    cursor: default;
+}
+
+.secondary {
+    background-color: white;
+    color: #666;
+    border: 1px solid #666;
+}
+
+.secondary:hover {
+    background-color: #f3f3f3;
+    color: #333;
+    border-color: #333;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+#login-card {
+    text-align: center;
+    margin-top: 20px;
+}
