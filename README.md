@@ -27,6 +27,18 @@ A Chrome Extension that helps you quickly find LinkedIn profiles for people in y
 -   `src/background/service_worker.js`: Handles badge updates and cross-origin stats checks.
 -   `src/popup`: The UI for the profile list.
 
+## 🤝 Contributing
+
+We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to get started.
+
+### 🗺️ Roadmap / Help Wanted
+Looking for a place to start? We need help with:
+
+- [ ] **Dark Mode**: Add a dark theme to the popup.
+- [ ] **Outlook Support**: Adapt the content script to work on `outlook.live.com`.
+- [ ] **Caching**: Cache LinkedIn status checks in `chrome.storage.local` to reduce API calls.
+- [ ] **Better Parsing**: Improve name extraction for "Reply" threads or complex signatures.
+
 ## ⚠️ Disclaimer
 This project is for educational purposes. It is not affiliated with LinkedIn or Google. It does not use private APIs or scrape data automatically.
 
