@@ -1,25 +1,17 @@
-# Gmail to LinkedIn Connector 🚀
+# Gmail to LinkedIn Connector (Beta 0.1) 🚀
 
 A Chrome Extension that helps you quickly find LinkedIn profiles for people in your Gmail threads. 
 
 **Safe, Private, and Open Source.**
 
-## Why use this?
-Recruiters, Salespeople, and Networkers often need to verify the LinkedIn profiles of people emailing them. 
-This extension adds a **Side Panel** to Gmail that:
-1.  **Scans** the open email thread for participants (Sender, CC, etc.).
-2.  **Lists** them cleanly in the sidebar.
-3.  **Generates** a one-click "Search on LinkedIn" button for each person.
-
 ## ✨ Features
--   **Privacy First**: No automated scraping, no shared sessions, no API abuse. 
--   **Smart Detection**: Identifies names and emails even from obfuscated Gmail DOM.
--   **Side Panel**: Persists on the right side of your screen; updates automatically as you switch emails.
--   **Floating Action Button**: Adds a convenient "in" button to Gmail for quick access.
+-   **Toolbar Integration**: Lives in your browser toolbar, no intrusive sidebars.
+-   **Smart Badges**: Shows a red notification badge (e.g., "2") when email participants are found.
+-   **Profile Pictures**: Extracts and displays Gmail avatars for quick identification.
+-   **Connection Status**: Manually check if you are 1st, 2nd, or 3rd degree connections (safe, no auto-scraping).
+-   **Smart Filtering**: Automatically ignores non-human senders like "Google", "Team", "No-Reply".
 
 ## 📥 Installation
-
-Since this project is experimental/open-source, you can install it as an "Unpacked Extension":
 
 1.  Clone or download this repository.
 2.  Open Chrome and go to `chrome://extensions`.
@@ -29,18 +21,11 @@ Since this project is experimental/open-source, you can install it as an "Unpack
 
 ## 🛠️ Development
 
-We welcome contributions! If you want to improve the name detection logic or UI:
-
 ### Project Structure
 -   `manifest.json`: V3 Manifest.
--   `src/content/gmail.js`: The script that runs on Gmail pages to find names.
--   `src/background/service_worker.js`: Handles side panel toggling.
--   `src/popup`: The UI for the side panel.
-
-### Ideas for Contribution
--   [ ] Better heuristic for extracting names from "Reply" threads.
--   [ ] Support for Outlook.com?
--   [ ] Dark mode for the sidebar.
+-   `src/content/gmail.js`: Scans the DOM for participants and "Check Status" logic.
+-   `src/background/service_worker.js`: Handles badge updates and cross-origin stats checks.
+-   `src/popup`: The UI for the profile list.
 
 ## ⚠️ Disclaimer
 This project is for educational purposes. It is not affiliated with LinkedIn or Google. It does not use private APIs or scrape data automatically.

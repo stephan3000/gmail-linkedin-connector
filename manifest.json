@@ -1,22 +1,18 @@
 {
     "manifest_version": 3,
-    "name": "Gmail to LinkedIn Connector",
-    "version": "1.0",
-    "description": "Find and connect with Gmail senders on LinkedIn",
+    "name": "Gmail Toolbar LinkedIn Connector",
+    "version": "0.1",
+    "description": "Show LinkedIn profiles for email participants in the toolbar popup.",
     "permissions": [
         "activeTab",
-        "scripting",
-        "storage",
-        "sidePanel"
+        "scripting"
     ],
     "host_permissions": [
-        "https://mail.google.com/*"
+        "https://mail.google.com/*",
+        "https://www.linkedin.com/*"
     ],
     "background": {
         "service_worker": "src/background/service_worker.js"
-    },
-    "side_panel": {
-        "default_path": "src/popup/popup.html"
     },
     "content_scripts": [
         {
